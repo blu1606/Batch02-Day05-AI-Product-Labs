@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Product Flow Report</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 24px; max-width: 900px; }
+    h1, h2, h3 { color: #1a1a1a; }
+    hr { border: none; border-top: 1px solid #ccc; margin: 24px 0; }
+    blockquote { margin: 16px 0; padding-left: 16px; border-left: 4px solid #ccc; color: #555; }
+    ul { margin: 12px 0 12px 24px; }
+    p { margin: 12px 0; }
+    a { color: #0066cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .flow-step { margin-bottom: 16px; }
+  </style>
+</head>
+<body>
+  <h1>AI Product Flow Report</h1>
+
+  <h2>Case Study: Vietnam Airlines NEO Chatbot</h2>
+  <hr>
+
+  <h1>1. Chọn một app để dùng thử</h1>
+  <h2>Ứng dụng được chọn</h2>
+  <h3>Vietnam Airlines NEO</h3>
+  <p>Link:</p>
+  <p><a href="https://www.vietnamairlines.com/sg/en/support/chatbot" target="_blank" rel="noopener">https://www.vietnamairlines.com/sg/en/support/chatbot</a></p>
+
+  <h2>Mô tả sản phẩm</h2>
+  <p>NEO là chatbot AI của Vietnam Airlines hỗ trợ:</p>
+  <ul>
+    <li>đổi vé</li>
+    <li>hành lý</li>
+    <li>refund</li>
+    <li>booking</li>
+    <li>hỗ trợ FAQ chuyến bay</li>
+  </ul>
+  <p>AI hoạt động như một virtual assistant hỗ trợ khách hàng 24/7.</p>
+  <hr>
+
+  <h1>2. Dùng thử sản phẩm thật</h1>
+
+  <h2>Query 1</h2>
+  <blockquote>“I want to change my flight”</blockquote>
+  <h3>Kỳ vọng của user</h3>
+  <p>User muốn:</p>
+  <ul>
+    <li>đổi vé nhanh</li>
+    <li>được hướng dẫn step-by-step</li>
+    <li>biết ngay cần làm gì tiếp theo</li>
+  </ul>
+  <hr>
+
+  <h3>Kết quả thực tế</h3>
+  <p>NEO:</p>
+  <ul>
+    <li>phân biệt voluntary / involuntary change</li>
+    <li>hiển thị nhiều rule</li>
+    <li>đưa policy dài</li>
+    <li>giải thích nhiều điều kiện</li>
+  </ul>
+  <hr>
+
+  <h2>Query 2</h2>
+  <blockquote>“How many kg baggage can I bring?”</blockquote>
+  <h3>Kỳ vọng của user</h3>
+  <p>User muốn:</p>
+  <ul>
+    <li>biết số kg được mang</li>
+    <li>có câu trả lời nhanh</li>
+  </ul>
+  <hr>
+
+  <h3>Kết quả thực tế</h3>
+  <p>NEO:</p>
+  <ul>
+    <li>hỏi thêm route và fare type</li>
+    <li>sau đó hiển thị nhiều policy:</li>
+  </ul>
+  <ul>
+    <li>domestic</li>
+    <li>international</li>
+    <li>infant</li>
+    <li>membership benefits</li>
+  </ul>
+  <hr>
+
+  <h2>Query 3</h2>
+  <blockquote>“I missed my flight, what should I do?”</blockquote>
+  <h3>Kỳ vọng của user</h3>
+  <p>User đang:</p>
+  <ul>
+    <li>stress</li>
+    <li>cần xử lý nhanh</li>
+    <li>muốn biết action tiếp theo</li>
+  </ul>
+  <hr>
+
+  <h3>Kết quả thực tế</h3>
+  <p>NEO:</p>
+  <ul>
+    <li>trả về no-show policy</li>
+    <li>refund conditions</li>
+    <li>nhiều timing rules</li>
+  </ul>
+  <hr>
+
+  <h1>3. Vẽ flow hiện tại (As-Is)</h1>
+  <h2>Flow hiện tại</h2>
+
+  <div class="flow-step">
+    <h3>Step 1</h3>
+    <p>User nhập câu hỏi</p>
+    <p>↓</p>
+  </div>
+
+  <div class="flow-step">
+    <h3>Step 2</h3>
+    <p>AI detect intent</p>
+    <p>Ví dụ:</p>
+    <ul>
+      <li>đổi vé</li>
+      <li>baggage</li>
+      <li>missed flight</li>
+    </ul>
+    <p>↓</p>
+  </div>
+
+  <div class="flow-step">
+    <h3>Step 3</h3>
+    <p>AI trả lời bằng:</p>
+    <ul>
+      <li>FAQ</li>
+      <li>policy</li>
+      <li>rules</li>
+      <li>exception</li>
+    </ul>
+    <p>↓</p>
+  </div>
+
+  <div class="flow-step">
+    <h3>Step 4</h3>
+    <p>User tự:</p>
+    <ul>
+      <li>đọc</li>
+      <li>suy luận</li>
+      <li>tìm next action</li>
+    </ul>
+  </div>
+  <hr>
+
+  <h1>4. Đánh dấu path yếu nhất</h1>
+  <h2>Path yếu nhất:</h2>
+  <p>“Information overload”</p>
+  <hr>
+
+  <h2>Vấn đề</h2>
+  <p>Khi user hỏi:</p>
+  <blockquote>“I want to change my flight”</blockquote>
+  <p>AI trả lời:</p>
+  <ul>
+    <li>quá dài</li>
+    <li>quá nhiều policy</li>
+    <li>nhiều exception</li>
+    <li>nhiều legal condition</li>
+  </ul>
+  <hr>
+
+  <h2>User bị kẹt ở đâu?</h2>
+  <p>User bị kẹt ở:</p>
+  <ul>
+    <li>xác định bước tiếp theo</li>
+    <li>tìm action cần làm</li>
+    <li>hiểu policy dài</li>
+  </ul>
+  <p>Thay vì:</p>
+  <blockquote>được dẫn flow từng bước.</blockquote>
+  <hr>
+
+  <h1>5. Failure Mode</h1>
+  <h2>Failure Statement</h2>
+  <p>Nếu user hỏi một task cần xử lý nhanh,<br>AI có thể:</p>
+  <ul>
+    <li>dump quá nhiều policy</li>
+    <li>trả lời như FAQ engine</li>
+    <li>không ưu tiên action flow</li>
+  </ul>
+  <p>Hậu quả là:</p>
+</body>
+</html>
